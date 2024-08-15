@@ -28,8 +28,8 @@
   show par: set block(spacing: 1.00em)
 
   // Configure equation numbering and spacing.
-  set math.equation(numbering: "(1)", supplement: [Eq.])
-  show math.equation: set block(spacing: 1.00em)
+  set math.equation(numbering: numbering.with("(1)"), supplement: [式])
+  show math.equation: set block(above: 18pt, below: 18pt)
 
   // Configure lists.
   set enum(indent: 9pt, body-indent: 9pt)
