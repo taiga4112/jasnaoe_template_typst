@@ -22,12 +22,14 @@
 
   set text(size: 9pt, font: english)
   show regex("[\p{scx:Han}\p{scx:Hira}\p{scx:Kana}]"): set text(font: mincho)
+  show "．": set text(font: mincho) // 全角ピリオドのときだけ明朝体に変更
+  show "，": set text(font: mincho) // 全角カンマのときだけ明朝体に変更
   set par(leading: 1.00em, first-line-indent: 1.00em, justify: true)
   show par: set block(spacing: 1.00em)
 
   // Configure equation numbering and spacing.
-  set math.equation(numbering: "(1)", supplement: [Eq.])
-  show math.equation: set block(spacing: 1.00em)
+  set math.equation(numbering: numbering.with("(1)"), supplement: [式])
+  show math.equation: set block(above: 18pt, below: 18pt)
 
   // Configure lists.
   set enum(indent: 9pt, body-indent: 9pt)
@@ -51,25 +53,28 @@
       #set align(center)
       #set text(size: 10pt, font: english, weight: "bold")
       #show regex("[\p{scx:Han}\p{scx:Hira}\p{scx:Kana}]"): set text(size: 10pt, font: gothic) // 日本語のときだけゴシック体に変更
-      #v(20pt, weak: true)
+      #show "．": set text(font: gothic)　// 全角ピリオドのときだけゴシック体に変更
+      #show "，": set text(font: gothic)　// 全角ピリオドのときだけゴシック体に変更
+      #v(9pt, weak: true)
       #if it.numbering != none and not is-ack {
         numbering("1.", ..levels)
         h(8pt, weak: true)
       }
       #it.body
-      #v(13.75pt, weak: true)
+      #v(9pt)
     ] else [
       // The other level headings are run-ins.
       #set par(first-line-indent: 0pt)
       #set text(9pt, weight: "bold", font: english)
       #show regex("[\p{scx:Han}\p{scx:Hira}\p{scx:Kana}]"): set text(size: 10pt, font: gothic) // 日本語のときだけゴシック体に変更
-      #v(9pt, weak: true)
+      #show "．": set text(font: gothic)　// 全角ピリオドのときだけゴシック体に変更
+      #show "，": set text(font: gothic)　// 全角ピリオドのときだけゴシック体に変更
+      #v(1pt, weak: true)
       #if it.numbering != none {
         numbering("1.", ..levels)
         h(8pt, weak: true)
       }
       #it.body
-      #v(10pt, weak: true)
     ]
   })
 
@@ -79,7 +84,7 @@
   show figure.where(kind: image): set figure.caption(position: bottom, separator: [ ])
   
   // Start two column mode and configure paragraph properties.
-  show: columns.with(2, gutter: 8mm)
+  show: columns.with(2, gutter: 4mm)
 
   // Display the paper's contents.
   body
