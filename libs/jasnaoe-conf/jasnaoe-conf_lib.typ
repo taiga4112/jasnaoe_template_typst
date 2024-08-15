@@ -22,6 +22,8 @@
 
   set text(size: 9pt, font: english)
   show regex("[\p{scx:Han}\p{scx:Hira}\p{scx:Kana}]"): set text(font: mincho)
+  show "．": set text(font: mincho) // 全角ピリオドのときだけ明朝体に変更
+  show "，": set text(font: mincho) // 全角カンマのときだけ明朝体に変更
   set par(leading: 1.00em, first-line-indent: 1.00em, justify: true)
   show par: set block(spacing: 1.00em)
 
@@ -51,6 +53,8 @@
       #set align(center)
       #set text(size: 10pt, font: english, weight: "bold")
       #show regex("[\p{scx:Han}\p{scx:Hira}\p{scx:Kana}]"): set text(size: 10pt, font: gothic) // 日本語のときだけゴシック体に変更
+      #show "．": set text(font: gothic)　// 全角ピリオドのときだけゴシック体に変更
+      #show "，": set text(font: gothic)　// 全角ピリオドのときだけゴシック体に変更
       #v(20pt, weak: true)
       #if it.numbering != none and not is-ack {
         numbering("1.", ..levels)
@@ -63,6 +67,8 @@
       #set par(first-line-indent: 0pt)
       #set text(9pt, weight: "bold", font: english)
       #show regex("[\p{scx:Han}\p{scx:Hira}\p{scx:Kana}]"): set text(size: 10pt, font: gothic) // 日本語のときだけゴシック体に変更
+      #show "．": set text(font: gothic)　// 全角ピリオドのときだけゴシック体に変更
+      #show "，": set text(font: gothic)　// 全角ピリオドのときだけゴシック体に変更
       #v(9pt, weak: true)
       #if it.numbering != none {
         numbering("1.", ..levels)
