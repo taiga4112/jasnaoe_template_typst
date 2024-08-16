@@ -1,7 +1,9 @@
 #import "libs/jasnaoe-conf/jasnaoe-conf_lib.typ": jasnaoe-conf
-#show: jasnaoe-conf.with(
-  bibliography: bibliography("references.yml", full: false)
-)
+#show: jasnaoe-conf.with()
+
+#import "libs/jasnaoe-conf/direct_bib_lib.typ": bibliography-list, bib-item, use-bib-item-ref
+#show: use-bib-item-ref.with(numbering: "1)") // 番号の書式を指定
+
 
 = 緒　　言
 このテンプレートは，2024年秋季以降の日本船舶海洋工学会の講演会論文作成を想定して，#link("https://typst.app")[Typst]で作成しています．
@@ -102,31 +104,49 @@ $ <eq:mmg_example>
 
 
 == 参考文献
-参考文献は `references.yml` に記載してください．
-#link("https://github.com/typst/hayagriva")[Hayagriva] という YAML 形式のフォーマットに従っています．
-編集するだけであれば特に解説する必要はないと思います．
-参考文献の体裁は `libs/rsj-conf/bib.csl` で制御しています．
-これは Citation Style Language という XML 形式で記述されております．
-CSL ファイルは著者が編集する必要はありませんが，詳細が気になる方は https://citationstyles.org/ をご参照ください．
-日本語論文として重要な点は，CSL ファイルでは Hayagriva で記述された `language` の属性を見て，著者表示を"カンマ区切りのみ"にするか"カンマ区切り+最終著者の前にand" にするかを決定している点です
-よって，英語文献だけでしたら YAML ファイルの代わりに bib ファイルも使用することができます．
-
-文献内で引用された順番にフォーマットを整えて自動で参考文献の章が作られます．
+参考文献は このファイルの`#bibliography-list` に直接記載してください．
+参考文献の書き方は，このテンプレートファイルを参考にしてください．
+参考文献は英語表記としてください．
+英語等(フランス語、ドイツ語その他アルファベットで表される言語) 以外の文献の場合，文献に英語等のタイトルがある場合はそれを記載し，無い場合は英訳と原語の併記としてください．
+併記の場合は，改行コードである 「`\`」 を使ってください．
+著者名：論文タイトル，掲載論文名，巻・号番号，ページ番号，発行年を書き，最後にピリオドを付けます．
 引用の方法については後述します．
-完成原稿では推奨されませんが，引用されていない論文も記載したい場合には full: true にすれば，すべての文献が出力されます．
+引用されていない論文を参考文献に記載するのは，推奨されていません．
+提出前に引用されているかを必ず確認してください．
 
 == 引用
-参考文献であれば #super[@mitsuyukiDesignProductionStrategy2014] のように表示されます．
-参考文献は連続して引用すると @kimura2017state @kimura2021control @kimura2020facility @khalil2002control @sugie1999feedback @shimz2022visually と繋げられて表示されます
-文法上では特に規則はありませんが，個人的にはラベルの命名規則として，図の場合には "fig:" から，表の場合には"tab:" から始めるようにラベル名を設定しており，参考文献のラベルは "著者名発行年タイトルの最初の単語"で名付けております．
+参考文献に記載したものを引用する際には この #super[@MakiStochastic2023] ように表示されます．
+参考文献は連続して引用すると #super[@format-en-journal @OkuboProduction2023 @YamamotoStructure1986] となります．
+引用の際には，`@` の後に参考文献のキーを記載してください．
 
 = おわりに
 
-論文の最後には結論を書きます．箇条書きスタイルを使うなどして，分かり易く，コンパクトに書いて下さい．結論を先に読むという読者も居ますので，分かり易く，何が研究されて，新しく何が分かったのかなどを書きます．
+論文の最後には結論を書きます．
+箇条書きスタイルを使うなどして，分かり易く，コンパクトに書いて下さい．
+結論を先に読むという読者も居ますので，分かり易く，何が研究されて，新しく何が分かったのかなどを書きます．
 
 
 = 謝　　辞
 
 謝辞が必要なときは，結論の次に書きます．章番号は付けませんが，「謝辞」の表題はセンタリングをして下さい．
 
-また，謝辞の次は参考文献を記載しますが，このテンプレートではreferences.ymlから自動的に記載するようにしているので，特に書くことはありません．ただし，参考文献は英語表記としてください．英語等(フランス語、ドイツ語その他アルファベットで表される言語)以外の文献の場合，文献に英語等のタイトルがある場合はそれを記載し，無い場合は英訳と原語の併記としてください．
+
+// 参考文献
+#bibliography-list(
+  title: "参　考　文　献", // 参考文献の章のタイトル
+)[
+  #bib-item(<format-en-journal>)[
+    Family names and initials of all authors: Title of the paper, _abbreviated title of the journal (or conference proceedings),_ number of the volume, number of the issue, numbers of the first and last pages, and year of publication.
+  ]
+  #bib-item(<MakiStochastic2023>)[
+    Maki, A., Hoshino, K., Dostal, L. et al.: Stochastic stabilization and destabilization of ship maneuvering motion by multiplicative noise, _Journal of Marine Science and Technology_, 28, 704–718, 2023.
+  ]
+  #bib-item(<OkuboProduction2023>)[
+    Okubo. Y., Mitsuyuki. T.: Study of the practical application of production planning method using shipbuilding process simulation, _Journal of the Japan Society of Naval Architects and Ocean Engineers_, 37, 115-123, 2023 (in Japanese). \
+    大久保友結，満行泰河：船舶建造工程シミュレーションを用いた生産計画立案手法の現場適用に関する研究, _日本船舶海洋工学会論文集_, 37, 115-123, 2023.
+  ]
+  #bib-item(<YamamotoStructure1986>)[
+    Yamamoto, Y., Otsubo, H., Sumi, Y., and Fujino, M.: Ship Structural Mechanics, Seizando-Shoten Publishing Co., Ltd., 1986 (in Japanese). \
+    山本善之，大坪英臣, 角洋一，藤野正隆：船体構造力学，_成山堂書店_，1986．
+  ]
+]
