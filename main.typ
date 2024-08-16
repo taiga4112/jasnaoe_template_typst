@@ -27,9 +27,17 @@
 章は `=`，節は `==`，小節は `===` で始めます．
 改段落は LaTeX と同じく改行を 2 つ以上挟みます．
 数字つき箇条書きは `+` で，数字なしの箇条書きは `-` を文頭につけて書くことができます．
-例えば，
+
+例えば，数字付きの箇条書きは
++ 1番目
++ 2番目
++ 3番目
+のような感じです．
+
+例えば，数字なしの箇条書きは
 - 1番目
 - 2番目
+- 3番目
 のような感じです．
 
 文字組等の投稿規定を満たすように作られていますので，フォントの種類の設定や行送り，文字サイズの設定を省略することができます．
@@ -48,7 +56,7 @@
 ここで placement 属性は，自動 (auto) だけでなく，紙面の上 (top) に寄せるか下 (bottom) に寄せるかを決められます．言及している文章に近い方に調整してください．
 
 #figure(
-  placement: auto,
+  placement: auto, // top, bottom, auto
   image("figs/example.svg", width: 100%),
   caption: [Example of a figure.],
 ) <fig:fig_example>
@@ -66,7 +74,7 @@
 必要に応じて，言及している文章に近い方に調整してください．
 
 #figure(
-  placement: auto,
+  placement: auto, // top, bottom, auto
   caption: [Example of a table.],
   table(
     columns: 4,
