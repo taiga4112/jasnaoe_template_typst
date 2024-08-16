@@ -18,5 +18,8 @@
     - [Typst LSP](https://marketplace.visualstudio.com/items?itemName=nvarner.typst-lsp)
     - 何でも良いのでpdfをVSCodeで閲覧できる拡張機能．例えば，[vscode-pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf)など．
 
-3. [Typst LSP](https://marketplace.visualstudio.com/items?itemName=nvarner.typst-lsp)のデフォルトの設定では，typファイルを保存すると，問題がなければコンパイル後にpdfファイルが同じ階層に生成されます．
-    - PROBLEMS(日本語で「問題」)を常に表示させておくと良いかと思います．Macだと command + shift + m ．
+3. main.typを編集して原稿を作成する．
+
+4. [Typst LSP](https://marketplace.visualstudio.com/items?itemName=nvarner.typst-lsp)のデフォルトの設定では，typファイルを保存すると，問題がなければコンパイル後にpdfファイルが同じ階層に生成されます．
+    - 問題があったときにわかりやすいように，PROBLEMS(日本語で「問題」)を常に表示させておくと良いかと思います．
+        - Macだと command + shift + m ．
