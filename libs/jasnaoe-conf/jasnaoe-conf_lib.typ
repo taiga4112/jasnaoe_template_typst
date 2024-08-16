@@ -2,8 +2,8 @@
 #let std-bibliography = bibliography
 
 // Set the Fonts
-#let gothic = ("MS Gothic", "Hiragino Kaku Gothic Pro", "IPAexGothic", "Noto Sans CJK JP")
-#let mincho = ("MS Mincho", "Hiragino Mincho Pro", "IPAexMincho", "Noto Serif CJK JP")
+#let gothic = ("MS Gothic", "IPAexGothic", "Noto Sans CJK JP", "Hiragino Kaku Gothic Pro")
+#let mincho = ("MS Mincho", "IPAexMincho", "Noto Serif CJK JP", "Hiragino Mincho Pro")
 #let english = ("Times New Roman", "New Computer Modern")
 
 #let jasnaoe-conf(
