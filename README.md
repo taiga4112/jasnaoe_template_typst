@@ -1,8 +1,11 @@
 # jasnaoe_template_typst
 
-このテンプレートは，2024年秋季以降の日本船舶海洋工学会の講演会論文作成を想定して，[Typst](https://typst.app)で作成しています．
+このテンプレートは，2024年秋季以降の日本船舶海洋工学会の講演会論文作成を想定して，
+[Typst](https://typst.app)で作成しています．
 
 もちろん♡非公式♡のテンプレートですので，ご使用の際は自己責任でお願いします．
+
+このテンプレートを使ったPDFファイルの仕上がりは，[GitHub PagesのPDFファイル](https://taiga4112.github.io/jasnaoe_template_typst/main.pdf)をご確認ください．
 
 ## 事前準備
 
@@ -69,7 +72,7 @@ IPAexフォントは以下の方法でインストールできそうです．
 
 ```bash
 # Debian系(Ubuntu)
-sudo apt install fonts-ipaexfont
+sudo apt-get install fonts-ipaexfont fonts-ipafont-mincho fonts-ipafont-gothic
 ```
 
 ## 使用方法
