@@ -53,10 +53,10 @@
 また，図は原則として英語表記としてください．
 日本語もしくはその他の言語の表記が必要な場合は，英語との併記としてください．
 文字・記号等は十分に判読できる大きさとしてください．
-ここで placement 属性は，自動 (auto) だけでなく，紙面の上 (top) に寄せるか下 (bottom) に寄せるかを決められます．言及している文章に近い方に調整してください．
+ここで placement 属性は，自動 (`auto`) だけでなく，紙面の上 (`top`) に寄せるか下 (`bottom`) に寄せるかを決められます．言及している文章に近い方に調整してください．また，また，どうしても対象の文章と図が離れてしまうのが嫌な場合，固定 (`none`) を指定してください．
 
 #figure(
-  placement: auto, // top, bottom, auto
+  placement: auto, // top, bottom, auto, none
   image("figs/example.svg", width: 100%),
   caption: [Example of a figure.],
 ) <fig:fig_example>
@@ -70,11 +70,12 @@
 表の表題（caption）は英語で書きます．
 また，表題の最後にはピリオドを付けて下さい．
 また，表も原則として英語表記としてください．
-ここで placement 属性は，自動 (auto) だけでなく，紙面の上 (top) に寄せるか下 (bottom) に寄せるかを決められます．
+ここで placement 属性は，自動 (`auto`) だけでなく，紙面の上 (`top`) に寄せるか下 (`bottom`) に寄せるかを決められます．また，また，どうしても対象の文章と表が離れてしまうのが嫌な場合，固定 (`none`) を指定してください．
+
 必要に応じて，言及している文章に近い方に調整してください．
 
 #figure(
-  placement: auto, // top, bottom, auto
+  placement: auto, // top, bottom, auto, none
   caption: [Example of a table.],
   table(
     columns: 4,
