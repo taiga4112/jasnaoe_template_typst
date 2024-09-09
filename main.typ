@@ -135,7 +135,7 @@ $ <eq:mmg_example>
 参考文献は連続して引用すると #super[@format-en-journal @OkuboProduction2023 @YamamotoStructure1986] となります．
 引用の際には，`@` の後に参考文献のキーを記載してください．
 
-また、#link("https://typst.app/docs/reference/model/bibliography/")[TypstのBibliograpy機能]を使って、	MendelelyやZoteroなどの文献管理ソフトから.bibファイルをインポートして参考文献を管理することもできます．
+また、#link("https://typst.app/docs/reference/model/bibliography/")[TypstのBibliograpy機能]を使って、	MendelelyやZoteroなどの文献管理ソフトから.bibファイルをエクスポートして、そのファイルを利用して参考文献リストを作ることもできます．
 この文献 #super[@ichinose_method_2022]は、TypstのBibliograpy機能を使って引用しています．
 
 ただし、参考文献のリスト機能とbibファイルの読み込み機能は併用できません．
