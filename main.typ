@@ -135,6 +135,11 @@ $ <eq:mmg_example>
 参考文献は連続して引用すると #super[@format-en-journal @OkuboProduction2023 @YamamotoStructure1986] となります．
 引用の際には，`@` の後に参考文献のキーを記載してください．
 
+また、#link("https://typst.app/docs/reference/model/bibliography/")[TypstのBibliograpy機能]を使って、	MendelelyやZoteroなどの文献管理ソフトから.bibファイルをインポートして参考文献を管理することもできます．
+この文献 #super[@ichinose_method_2022]は、TypstのBibliograpy機能を使って引用しています．
+
+ただし、参考文献のリスト機能とbibファイルの読み込み機能は併用できません．
+
 = おわりに
 
 論文の最後には結論を書きます．
@@ -150,6 +155,7 @@ $ <eq:mmg_example>
 // 参考文献
 #bibliography-list(
   title: "参　考　文　献", // 参考文献の章のタイトル
+  style: "bibs/jasnaoe-conference.csl",
 )[
   #bib-item(<format-en-journal>)[
     Family names and initials of all authors: Title of the paper, _abbreviated title of the journal (or conference proceedings),_ number of the volume, number of the issue, numbers of the first and last pages, and year of publication.
@@ -166,3 +172,9 @@ $ <eq:mmg_example>
     山本善之，大坪英臣, 角洋一，藤野正隆：船体構造力学，_成山堂書店_，1986．
   ]
 ]
+
+// 他の.bibファイルを読み込む場合はこの行を使ってください．
+#bibliography("bibs/cite_sample.bib",
+ title: "参　考　文　献",
+ style: "bibs/jasnaoe-conference.csl",
+ )
