@@ -155,7 +155,6 @@ $ <eq:mmg_example>
 // 参考文献
 #bibliography-list(
   title: "参　考　文　献", // 参考文献の章のタイトル
-  style: "bibs/jasnaoe-conference.csl",
 )[
   #bib-item(<format-en-journal>)[
     Family names and initials of all authors: Title of the paper, _abbreviated title of the journal (or conference proceedings),_ number of the volume, number of the issue, numbers of the first and last pages, and year of publication.
