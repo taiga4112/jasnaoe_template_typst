@@ -173,7 +173,7 @@ $ <eq:mmg_example>
 ]
 
 // 他の.bibファイルを読み込む場合はこの行を使ってください．
-#bibliography("bibs/cite_sample.bib",
+#bibliography("references.bib",
  title: "参　考　文　献",
- style: "bibs/jasnaoe-conference.csl",
+ style: "libs/jasnaoe-conf/jasnaoe-reference.csl",
  )
