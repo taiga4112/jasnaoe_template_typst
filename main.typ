@@ -136,7 +136,7 @@ $ <eq:mmg_example>
 引用の際には，`@` の後に参考文献のキーを記載してください．
 
 また、#link("https://typst.app/docs/reference/model/bibliography/")[TypstのBibliograpy機能]を使って、	MendelelyやZoteroなどの文献管理ソフトから.bibファイルをエクスポートして、そのファイルを利用して参考文献リストを作ることもできます．
-この文献 #super[@ichinose_method_2022]は、TypstのBibliograpy機能を使って引用しています．
+この文献 #super[@ichinose_method_2022] とこの文献 #super[@ichinose_sustainable_2022] とこの文献 #super[@okuboStudyPracticalApplication2023] は，TypstのBibliograpy機能を使って引用しています．
 
 ただし、参考文献のリスト機能とbibファイルの読み込み機能は併用できません．
 
