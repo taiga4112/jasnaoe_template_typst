@@ -1,8 +1,8 @@
 // Workaround for the lack of an `std` scope.
 #let std-bibliography = bibliography
 
-#let mincho = ("Times New Roman", "MS Mincho", "IPAMincho", "Noto Serif CJK JP", "Hiragino Mincho Pro")
-#let gothic = ("Times New Roman", "MS Gothic", "IPAGothic", "Noto Sans CJK JP", "Hiragino Kaku Gothic Pro")
+#let mincho = ("Times New Roman", "New Computer Modern", "MS Mincho", "IPAMincho", "Noto Serif CJK JP", "Hiragino Mincho Pro")
+#let gothic = ("Times New Roman", "New Computer Modern", "MS Gothic", "IPAGothic", "Noto Sans CJK JP", "Hiragino Kaku Gothic Pro")
 
 #let jasnaoe-conf(
   title: none,
