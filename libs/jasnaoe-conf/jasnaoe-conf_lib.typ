@@ -19,7 +19,6 @@
   )
 
   set text(
-    lang: "ja", // 英語のみ場合は"en"を指定
     size: 9pt,
     font: mincho,
   )
