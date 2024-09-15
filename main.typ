@@ -131,14 +131,13 @@ $ <eq:mmg_example>
 提出前に引用されているかを必ず確認してください．
 
 == 引用
-参考文献に記載したものを引用する際には この #super[@MakiStochastic2023] ように表示されます．
-参考文献は連続して引用すると #super[@format-en-journal @OkuboProduction2023 @YamamotoStructure1986] となります．
+参考文献に記載したものを引用する際には この #super[@ichinose_method_2022] ように表示されます．
+参考文献は連続して引用すると #super[@ichinose_method_2022 @ichinose_sustainable_2022 @okuboStudyPracticalApplication2023] となります．
 引用の際には，`@` の後に参考文献のキーを記載してください．
 
-また、#link("https://typst.app/docs/reference/model/bibliography/")[TypstのBibliograpy機能]を使って、	MendelelyやZoteroなどの文献管理ソフトから.bibファイルをエクスポートして、そのファイルを利用して参考文献リストを作ることもできます．
-この文献 #super[@ichinose_method_2022] とこの文献 #super[@ichinose_sustainable_2022] とこの文献 #super[@okuboStudyPracticalApplication2023] は，TypstのBibliograpy機能を使って引用しています．
-
-ただし、参考文献のリスト機能とbibファイルの読み込み機能は併用できません．
+現時点では、#link("https://typst.app/docs/reference/model/bibliography/")[TypstのBibliograpy機能]を使って、	MendelelyやZoteroなどの文献管理ソフトから.bibファイルをエクスポートして、そのファイルを利用して参考文献リストを作る方法をスタンダートとして定義しています．
+ただし，日本語英語併記には対応していません．日本語英語併記に対応する場合は，参考文献を直接定義する方法を採用してください．
+このファイルの末尾に直接定義する方法の例を記載しています．
 
 = おわりに
 
@@ -155,29 +154,30 @@ $ <eq:mmg_example>
 // --------------------------------------------------
 // 参考文献
 // --------------------------------------------------
-// 直接定義する場合はこのコードを編集してください
-#bibliography-list(
-  title: "参　考　文　献", // 参考文献の章のタイトル
-)[
-  #bib-item(<format-en-journal>)[
-    Family names and initials of all authors: Title of the paper, _abbreviated title of the journal (or conference proceedings),_ number of the volume, number of the issue, numbers of the first and last pages, and year of publication.
-  ]
-  #bib-item(<MakiStochastic2023>)[
-    Maki, A., Hoshino, K., Dostal, L. et al.: Stochastic stabilization and destabilization of ship maneuvering motion by multiplicative noise, _Journal of Marine Science and Technology_, 28, 704–718, 2023.
-  ]
-  #bib-item(<OkuboProduction2023>)[
-    Okubo. Y., Mitsuyuki. T.: Study of the practical application of production planning method using shipbuilding process simulation, _Journal of the Japan Society of Naval Architects and Ocean Engineers_, 37, 115-123, 2023 (in Japanese). \
-    大久保友結，満行泰河：船舶建造工程シミュレーションを用いた生産計画立案手法の現場適用に関する研究, _日本船舶海洋工学会論文集_, 37, 115-123, 2023.
-  ]
-  #bib-item(<YamamotoStructure1986>)[
-    Yamamoto, Y., Otsubo, H., Sumi, Y., and Fujino, M.: Ship Structural Mechanics, Seizando-Shoten Publishing Co., Ltd., 1986 (in Japanese). \
-    山本善之，大坪英臣, 角洋一，藤野正隆：船体構造力学，_成山堂書店_，1986．
-  ]
-]
-// --------------------------------------------------
 // 他の.bibファイルを読み込む場合はこの行を使ってください
 // ただし，現時点では公式フォーマットで定められている英語日本語の併記には対応できていません
 #bibliography("references.bib",
  title: "参　考　文　献",
  style: "libs/jasnaoe-conf/jasnaoe-reference.csl",
  )
+// --------------------------------------------------
+// // 直接定義する場合はこのコードを編集してください
+// #bibliography-list(
+//   title: "参　考　文　献", // 参考文献の章のタイトル
+// )[
+//   #bib-item(<format-en-journal>)[
+//     Family names and initials of all authors: Title of the paper, _abbreviated title of the journal (or conference proceedings),_ number of the volume, number of the issue, numbers of the first and last pages, and year of publication.
+//   ]
+//   #bib-item(<MakiStochastic2023>)[
+//     Maki, A., Hoshino, K., Dostal, L. et al.: Stochastic stabilization and destabilization of ship maneuvering motion by multiplicative noise, _Journal of Marine Science and Technology_, 28, 704–718, 2023.
+//   ]
+//   #bib-item(<OkuboProduction2023>)[
+//     Okubo. Y., Mitsuyuki. T.: Study of the practical application of production planning method using shipbuilding process simulation, _Journal of the Japan Society of Naval Architects and Ocean Engineers_, 37, 115-123, 2023 (in Japanese). \
+//     大久保友結，満行泰河：船舶建造工程シミュレーションを用いた生産計画立案手法の現場適用に関する研究, _日本船舶海洋工学会論文集_, 37, 115-123, 2023.
+//   ]
+//   #bib-item(<YamamotoStructure1986>)[
+//     Yamamoto, Y., Otsubo, H., Sumi, Y., and Fujino, M.: Ship Structural Mechanics, Seizando-Shoten Publishing Co., Ltd., 1986 (in Japanese). \
+//     山本善之，大坪英臣, 角洋一，藤野正隆：船体構造力学，_成山堂書店_，1986．
+//   ]
+// ]
+// --------------------------------------------------
