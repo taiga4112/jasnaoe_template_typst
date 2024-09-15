@@ -6,6 +6,7 @@
 もちろん♡非公式♡のテンプレートですので，ご使用の際は自己責任でお願いします．
 
 このテンプレートを使ったPDFファイルの仕上がりは，[GitHub PagesのPDFファイル](https://taiga4112.github.io/jasnaoe_template_typst/main.pdf)をご確認ください．
+(現在，Linux系のOSで試すと英語フォントがうまく作動しない現象が発生しています．詳しくは[issue](https://github.com/taiga4112/jasnaoe_template_typst/issues/25)で議論しています．)
 
 > **注意**
 >
