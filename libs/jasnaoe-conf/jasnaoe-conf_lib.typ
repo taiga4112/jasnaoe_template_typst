@@ -1,10 +1,8 @@
 // Workaround for the lack of an `std` scope.
 #let std-bibliography = bibliography
 
-// Set the Fonts
-#let gothic = ("MS Gothic", "IPAGothic", "Noto Sans CJK JP", "Hiragino Kaku Gothic Pro")
-#let mincho = ("MS Mincho", "IPAMincho", "Noto Serif CJK JP", "Hiragino Mincho Pro")
-#let english = ("Times New Roman", "New Computer Modern")
+#let mincho = ("Times New Roman", "MS Mincho", "IPAMincho", "Noto Serif CJK JP", "Hiragino Mincho Pro")
+#let gothic = ("Times New Roman", "MS Gothic", "IPAGothic", "Noto Sans CJK JP", "Hiragino Kaku Gothic Pro")
 
 #let jasnaoe-conf(
   title: none,
@@ -20,10 +18,11 @@
     margin: (top: 25mm, bottom: 22mm, x: 17mm)
   )
 
-  set text(size: 9pt, font: english)
-  show regex("[\p{scx:Han}\p{scx:Hira}\p{scx:Kana}]"): set text(font: mincho)
-  show "．": set text(font: mincho) // 全角ピリオドのときだけ明朝体に変更
-  show "，": set text(font: mincho) // 全角カンマのときだけ明朝体に変更
+  set text(
+    lang: "ja", // 英語のみ場合は"en"を指定
+    size: 9pt,
+    font: mincho,
+  )
   set par(leading: 1.00em, first-line-indent: 1.00em, justify: true)
   show par: set block(spacing: 1.00em)
 
@@ -48,14 +47,12 @@
     if it.level == 1 [
       // First-level headings are centered smallcaps.
       // We don't want to number of the acknowledgment section.
+      #v(9pt)
       #set par(first-line-indent: 0pt)
       #let is-ack = it.body in ([謝辞], [謝　辞], [謝　　辞], [Acknowledgement])
       #set align(center)
-      #set text(size: 10pt, font: english, weight: "bold")
-      #show regex("[\p{scx:Han}\p{scx:Hira}\p{scx:Kana}]"): set text(size: 10pt, font: gothic) // 日本語のときだけゴシック体に変更
-      #show "．": set text(font: gothic)　// 全角ピリオドのときだけゴシック体に変更
-      #show "，": set text(font: gothic)　// 全角ピリオドのときだけゴシック体に変更
-      #v(9pt, weak: true)
+      #set text(size: 10pt, font: gothic, weight: "bold")
+      // #v(9pt, weak: true)
       #if it.numbering != none and not is-ack {
         numbering("1.", ..levels)
         h(8pt, weak: true)
@@ -64,12 +61,9 @@
       #v(9pt)
     ] else [
       // The other level headings are run-ins.
+      #v(9pt, weak: true)
       #set par(first-line-indent: 0pt)
-      #set text(9pt, weight: "bold", font: english)
-      #show regex("[\p{scx:Han}\p{scx:Hira}\p{scx:Kana}]"): set text(size: 10pt, font: gothic) // 日本語のときだけゴシック体に変更
-      #show "．": set text(font: gothic)　// 全角ピリオドのときだけゴシック体に変更
-      #show "，": set text(font: gothic)　// 全角ピリオドのときだけゴシック体に変更
-      #v(1pt, weak: true)
+      #set text(size: 9pt, font: gothic, weight: "bold")
       #if it.numbering != none {
         numbering("1.", ..levels)
         h(8pt, weak: true)
