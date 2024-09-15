@@ -39,16 +39,14 @@ brew install typst
 各自のPCにインストールされているフォントと照らし合わせて，前の方から優先的に使われるようです．
 
 ```ts
-#let gothic = ("MS Gothic", "IPAGothic", "Noto Sans CJK JP", "Hiragino Kaku Gothic Pro")
-#let mincho = ("MS Mincho", "IPAMincho", "Noto Serif CJK JP", "Hiragino Mincho Pro")
-#let english = ("Times New Roman", "New Computer Modern")
+#let mincho = ("Times New Roman", "MS Mincho", "IPAMincho", "Noto Serif CJK JP", "Hiragino Mincho Pro")
+#let gothic = ("Times New Roman", "MS Gothic", "IPAGothic", "Noto Sans CJK JP", "Hiragino Kaku Gothic Pro")
 ```
 
-基本的には，前の方がおすすめなフォントですが，
+基本的には，英語の場合に優先的に選択されるTimes New Roman以外を除くと，前の方がおすすめなフォントですが，
 
 - ゴシック: MS GothicとIPAGothic
-- 明朝: MS MinchoとIAPMincho
-- 英語: Times New Roman
+- 明朝: MS MinchoとIPAMincho
 
 くらいまででないと，仕上がりが[指定フォーマット](https://www.jasnaoe.or.jp/lecture/2024aut/thesis.html?id=yoryo)に近づきません．
 
