@@ -89,11 +89,4 @@
   // Display the paper's contents.
   body
 
-  // Display bibliography.
-  // if bibliography != none {
-  //   show std-bibliography: set text(9pt)
-  //   show regex("[0-9a-zA-Z]"): set text(font: english)
-  //   set std-bibliography(title: align(center, text(10pt)[参　考　文　献]), style: "jasnaoe-conf.csl")
-  //   bibliography
-  // }
 }
