@@ -60,7 +60,7 @@
       #v(9pt)
     ] else [
       // The other level headings are run-ins.
-      #v(9pt, weak: true)
+      #v(9pt)
       #set par(first-line-indent: 0pt)
       #set text(size: 9pt, font: gothic, weight: "bold")
       #if it.numbering != none {
