@@ -15,6 +15,7 @@
   // Configure the page.
   set page(
     paper: "a4",
+    columns: 2,
     margin: (top: 25mm, bottom: 22mm, x: 17mm)
   )
 
@@ -76,9 +77,6 @@
   show figure.where(kind: image): set figure(placement: top, supplement: [Fig.])
   show figure.where(kind: image): set figure.caption(position: bottom, separator: [ ])
   
-  // Start two column mode and configure paragraph properties.
-  show: columns.with(2, gutter: 4mm)
-
   // Display the paper's contents.
   body
 
