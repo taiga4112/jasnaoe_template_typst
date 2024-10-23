@@ -24,7 +24,6 @@
     font: mincho,
   )
   set par(leading: 1.00em, first-line-indent: 1.00em, justify: true)
-  show par: set block(spacing: 1.00em)
 
   // Configure equation numbering and spacing.
   set math.equation(numbering: numbering.with("(1)"), supplement: [式])
@@ -36,9 +35,9 @@
 
   // Configure headings.
   set heading(numbering: "1.")
-  show heading: it => locate(loc => {
+  show heading: it => context{
     // Find out the final number of the heading counter.
-    let levels = counter(heading).at(loc)
+    let levels = counter(heading).at(here())
     let deepest = if levels != () {
       levels.last()
     } else {
@@ -70,7 +69,7 @@
       }
       #it.body
     ]
-  })
+  }
 
   show figure.where(kind: table): set figure(placement: top, supplement: [Table ])
   show figure.where(kind: table): set figure.caption(position: top, separator: [ ])
