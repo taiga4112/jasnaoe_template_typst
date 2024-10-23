@@ -95,7 +95,17 @@ sudo apt-get install msttcorefonts # Times New Roman
 
 編集するファイルはmain.typです．
 
-#### Visual Studio Code (VSCode) を使用する場合
+#### コンソールでコンパイルをする場合 (推奨)
+
+以下のコマンドを実行することでファイルの変更時に自動でコンパイルを行ってpdfファイルを生成してくれます。コンパイルが失敗する場合はエラーメッセージが表示されるので、該当の場所を修正しましょう。
+
+```sh
+typst watch main.typ main.pdf
+```
+
+詳しくは、[公式サイト](https://github.com/typst/typst?tab=readme-ov-file#usage)を参照ください．
+
+#### Visual Studio Code (VSCode) 固有のプラグインを使用する場合 (非推奨)
 
 1. VSCode で `File`→`Open Folder` でこのフォルダーを開く．
 
@@ -107,6 +117,3 @@ sudo apt-get install msttcorefonts # Times New Roman
     - 問題があったときにわかりやすいように，PROBLEMS(日本語で「問題」)を常に表示させておくと良いかと思います．
         - Macだと command + shift + m ．
 
-#### コンソールでコンパイルをする場合
-
-[公式サイト](https://github.com/typst/typst?tab=readme-ov-file#usage)を参照ください．
