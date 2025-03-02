@@ -1,7 +1,6 @@
 # jasnaoe_template_typst
 
-このテンプレートは，2024年秋季以降の日本船舶海洋工学会の講演会論文作成を想定して，
-[Typst](https://typst.app)で作成しています．
+このテンプレートは，2024年秋季以降の日本船舶海洋工学会の講演会論文作成を想定して，[Typst](https://typst.app)で作成しています．
 
 もちろん♡非公式♡のテンプレートですので，ご使用の際は自己責任でお願いします．
 
@@ -37,19 +36,18 @@ brew install typst
 ### フォントのインストール(Mac, Linuxのみ)
 
 現在，フォントについては以下の設定になっています．
-各自のPCにインストールされているフォントと照らし合わせて，前の方から優先的に使われるようです．
+各自のPCにインストールされているフォントと照らし合わせて，前の方から優先的に使われます．
 
 ```ts
-#let mincho = ("Times New Roman", "MS Mincho", "IPAMincho", "Noto Serif CJK JP", "Hiragino Mincho Pro")
-#let gothic = ("Times New Roman", "MS Gothic", "IPAGothic", "Noto Sans CJK JP", "Hiragino Kaku Gothic Pro")
+#let mincho = ("Times New Roman", "IPAMincho")
+#let gothic = ("Times New Roman", "IPAGothic")
+// #let mincho = ("Times New Roman", "MS Mincho", "IPAMincho")
+// #let gothic = ("Times New Roman", "MS Gothic", "IPAGothic")
 ```
 
-基本的には，英語の場合に優先的に選択されるTimes New Roman以外を除くと，前の方がおすすめなフォントですが，
-
-- ゴシック: MS GothicとIPAGothic
-- 明朝: MS MinchoとIPAMincho
-
-くらいまででないと，仕上がりが[指定フォーマット](https://www.jasnaoe.or.jp/lecture/2024aut/thesis.html?id=yoryo)に近づきません．
+基本的には，英語の場合に優先的に選択されるTimes New Roman，日本語の場合はIPAフォントが使われるように設定しています．
+[指定フォーマット](https://www.jasnaoe.or.jp/lecture/2024aut/thesis.html?id=yoryo)はMSフォントを使っています．
+必要に応じて、コメントアウトしているMSフォントを指定すると良いです。
 
 Typstで認識されているフォントを確認するには，以下のコマンドを実行すると良いです．
 
@@ -59,7 +57,15 @@ typst fonts
 
 #### Windows
 
-おそらく，WindowsではMS GothicとMS Mincho，Times New Romanがデフォルトで入っているので，何もする必要がありません．
+IPAフォントのインストールは[ここ](https://www.kisnet.or.jp/~kanou/index.php?windows/windows%E5%85%B1%E9%80%9A/IPAFont%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)あたりを参考にしてください．
+フォントの設定を以下のように変えて、Windowsに搭載されているフォントを使うのも良いかもしれません．
+
+```ts
+// #let mincho = ("Times New Roman", "IPAMincho")
+// #let gothic = ("Times New Roman", "IPAGothic")
+#let mincho = ("Times New Roman", "MS Mincho", "IPAMincho")
+#let gothic = ("Times New Roman", "MS Gothic", "IPAGothic")
+```
 
 #### Mac OS
 
@@ -71,7 +77,7 @@ IPAフォントであれば，[Homebrew](https://formulae.brew.sh/)を利用し�
 brew install --cask font-ipafont
 ```
 
-MSフォントは，Microsoft OfficeがインストールされているPCであれば[この記事](https://note.com/tomorrow311/n/ne835a8c525a9)の方法で取り込めそうですが，ご自身の責任でお願いします．
+MSフォントを使用する場合は，Microsoft OfficeがインストールされているPCであれば[この記事](https://note.com/tomorrow311/n/ne835a8c525a9)の方法で取り込めそうですが，ご自身の責任でお願いします．
 
 #### Linux
 
