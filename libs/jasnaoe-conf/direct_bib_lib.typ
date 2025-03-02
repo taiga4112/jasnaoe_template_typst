@@ -4,7 +4,7 @@
   use-bib-item-ref,
 ) = {
   let title-default = "Bibliography"
-  let numbering-default = "(1)"
+  let numbering-default = "[1]"
   let figure-kind = "bx-bib-item"
   let end-mark = <bx-bib-end>
 
@@ -16,7 +16,7 @@
     // Otherwise the figure.numbering is applied,
     // but adjust it if it is at default.
     if list-num != auto { list-num }
-    else if fig-num == "1" { "(1)" }
+    else if fig-num == "1" { "[1]" }
     else { fig-num }
   }
 
@@ -60,7 +60,7 @@
     heading-level: 1,
     numbering: auto,
     key-width: auto,
-    body-indent: 0.30em,
+    body-indent: 0.65em,
     spacing: auto,
     adjust-spacing: auto,
     body,
@@ -70,29 +70,15 @@
       else { spacing == auto }
     )
 
-    // // Print the heading.
-    // if heading-level != none {
-    //   let head = heading(level: heading-level, numbering: none, title)
-    //   if use-adjuster {
-    //     block(below: 0pt, head)
-    //   } else {
-    //     head
-    //   }
-    // }
-    
-    // Center-align the title using a block with a centered width.
+    // Print the heading.
     if heading-level != none {
-        let head = heading(
-            level: heading-level,
-            numbering: none,
-            title
-        )
-        let centered_head = block(width: 100%, align(center, head))
-        if use-adjuster {
-            block(below: 0pt, centered_head)
-        } else {
-            centered_head
-        }
+      let head = heading(level: heading-level, numbering: none, title)
+      let centered_head = block(width: 100%, align(center, head))
+      if use-adjuster {
+        block(below: 0pt, centered_head)
+      } else {
+        centered_head
+      }
     }
 
     // The figure (i.e. bib-item) is laid out here.
@@ -115,11 +101,13 @@
         tight: true,
         enum.item(count, data.body),
       )
-      if spacing == auto {
-        block(entry)
-      } else {
-        block(entry, above: spacing, below: spacing)
-      }
+      align(start + top, (
+        if spacing == auto {
+          block(entry)
+        } else {
+          block(entry, above: spacing, below: spacing)
+        }
+      ))
 
       let metric = measure(key)
       max-key-width.update(val => calc.max(val, metric.width))
