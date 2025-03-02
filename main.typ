@@ -147,6 +147,7 @@ $ <eq:mmg_example>
 引用されていない論文を参考文献に記載するのは，推奨されていません．
 提出前に引用されているかを必ず確認してください．
 
+
 == 引用
 参考文献に記載したものを引用する際には この #super[@ichinose_method_2022] ように表示されます．
 参考文献は連続して引用すると #super[@ichinose_method_2022 @ichinose_sustainable_2022 @okuboStudyPracticalApplication2023] となります．
@@ -161,6 +162,8 @@ $ <eq:mmg_example>
 論文の最後には結論を書きます．
 箇条書きスタイルを使うなどして，分かり易く，コンパクトに書いて下さい．
 結論を先に読むという読者も居ますので，分かり易く，何が研究されて，新しく何が分かったのかなどを書きます．
+
+最終ページの２段組の高さを揃える場合、#link("https://typst.app/docs/reference/layout/colbreak/")[`colbreak()`]関数を使って手動で調整してください．
 
 
 = 謝　　辞
