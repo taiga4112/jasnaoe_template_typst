@@ -113,7 +113,8 @@
     [Left], [...], [16 mm], [107.5 mm],
     [Right], [...], [100 mm], [191.5 mm],
     [Bottom], [...], [275 mm], [275 mm],
-  )
+  ),
+  kind: table,
 ) <tab:table_example>
 
 
