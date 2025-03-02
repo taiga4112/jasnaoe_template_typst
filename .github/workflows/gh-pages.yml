@@ -29,7 +29,7 @@ jobs:
         run: |
           mkdir ./out
           typst compile ./main.typ ./out/main.pdf
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
       - uses: actions/deploy-pages@v4
