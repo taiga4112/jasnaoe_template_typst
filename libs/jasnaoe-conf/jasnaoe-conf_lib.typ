@@ -25,7 +25,14 @@
     size: 9pt,
     font: mincho,
   )
-  set par(leading: 1.00em, first-line-indent: 1.00em, justify: true)
+  set par(
+    leading: 1.00em,
+    first-line-indent: (
+      amount: 1.00em,
+      all: true,
+    ),
+    justify: true,
+  )
 
   // Configure equation numbering and spacing.
   set math.equation(numbering: numbering.with("(1)"), supplement: [式])
@@ -77,6 +84,10 @@
   show figure.where(kind: table): set figure.caption(position: top, separator: [ ])
   show figure.where(kind: image): set figure(placement: top, supplement: [Fig.])
   show figure.where(kind: image): set figure.caption(position: bottom, separator: [ ])
+
+  show figure.caption: it => {
+    align(box(align(it, left)), center)
+  }
   
   // Display the paper's contents.
   body
