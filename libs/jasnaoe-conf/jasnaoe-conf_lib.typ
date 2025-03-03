@@ -31,6 +31,7 @@
     leading: 1.00em,
     first-line-indent: (
       amount: 1.00em,
+      all: true,
     ),
     justify: true,
   )
