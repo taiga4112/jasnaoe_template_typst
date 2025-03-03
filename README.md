@@ -39,14 +39,16 @@ brew install typst
 各自のPCにインストールされているフォントと照らし合わせて，前の方から優先的に使われます．
 
 ```ts
-#let mincho = ("Times New Roman", "IPAMincho")
-#let gothic = ("Times New Roman", "IPAGothic")
+#let mincho = ("TeX Gyre Termes", "IPAMincho")
+#let gothic = ("TeX Gyre Termes", "IPAGothic")
+// #let mincho = ("Times New Roman", "IPAMincho")
+// #let gothic = ("Times New Roman", "IPAGothic")
 // #let mincho = ("Times New Roman", "MS Mincho", "IPAMincho")
 // #let gothic = ("Times New Roman", "MS Gothic", "IPAGothic")
 ```
 
-基本的には，英語の場合に優先的に選択されるTimes New Roman，日本語の場合はIPAフォントが使われるように設定しています．
-[指定フォーマット](https://www.jasnaoe.or.jp/lecture/2024aut/thesis.html?id=yoryo)はMSフォントを使っています．
+基本的には，英語の場合に優先的に選択されるTeX Gyre Termes，日本語の場合はIPAフォントが使われるように設定しています．
+[指定フォーマット](https://www.jasnaoe.or.jp/lecture/2024aut/thesis.html?id=yoryo)は英語はTimes New Romanフォント、日本語はMSフォントを使っています．
 必要に応じて、コメントアウトしているMSフォントを指定すると良いです。
 
 Typstで認識されているフォントを確認するには，以下のコマンドを実行すると良いです．
@@ -57,10 +59,14 @@ typst fonts
 
 #### Windows
 
-IPAフォントのインストールは[ここ](https://www.kisnet.or.jp/~kanou/index.php?windows/windows%E5%85%B1%E9%80%9A/IPAFont%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)あたりを参考にしてください．
+Tex Gyre Termsフォントのダウンロードは[ここ](https://www.1001fonts.com/tex-gyre-termes-font.html)からできそうです．
+
+IPAフォントのダウンロードと新しいフォントのインストールは[ここ](https://www.kisnet.or.jp/~kanou/index.php?windows/windows%E5%85%B1%E9%80%9A/IPAFont%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)あたりを参考にしてください．
 フォントの設定を以下のように変えて、Windowsに搭載されているフォントを使うのも良いかもしれません．
 
 ```ts
+// #let mincho = ("TeX Gyre Termes", "IPAMincho")
+// #let gothic = ("TeX Gyre Termes", "IPAGothic")
 // #let mincho = ("Times New Roman", "IPAMincho")
 // #let gothic = ("Times New Roman", "IPAGothic")
 #let mincho = ("Times New Roman", "MS Mincho", "IPAMincho")
@@ -74,10 +80,11 @@ IPAフォントのインストールは[ここ](https://www.kisnet.or.jp/~kanou/
 IPAフォントであれば，[Homebrew](https://formulae.brew.sh/)を利用して簡単にインストールできます．
 
 ```bash
+brew install --cask font-tex-gyre-termes
 brew install --cask font-ipafont
 ```
 
-MSフォントを使用する場合は，Microsoft OfficeがインストールされているPCであれば[この記事](https://note.com/tomorrow311/n/ne835a8c525a9)の方法で取り込めそうですが，ご自身の責任でお願いします．
+Times New RomanフォントやMSフォントを使用する場合は，Microsoft OfficeがインストールされているPCであれば[この記事](https://note.com/tomorrow311/n/ne835a8c525a9)の方法で取り込めそうですが，ご自身の責任でお願いします．
 
 #### Linux
 
@@ -85,8 +92,8 @@ IPAフォントは以下の方法でインストールできそうです．
 
 ```bash
 # Debian系(Ubuntu)
+sudo apt install tex-gyre
 sudo apt-get install fonts-ipafont
-sudo apt-get install msttcorefonts # Times New Roman
 ```
 
 ## 使用方法
