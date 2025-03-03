@@ -77,6 +77,10 @@
   show figure.where(kind: table): set figure.caption(position: top, separator: [ ])
   show figure.where(kind: image): set figure(placement: top, supplement: [Fig.])
   show figure.where(kind: image): set figure.caption(position: bottom, separator: [ ])
+
+  show figure.caption: it => {
+    align(box(align(it, left)), center)
+  }
   
   // Display the paper's contents.
   body
