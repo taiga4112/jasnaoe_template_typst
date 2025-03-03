@@ -1,8 +1,10 @@
 // Workaround for the lack of an `std` scope.
 #let std-bibliography = bibliography
 
-#let mincho = ("Times New Roman", "IPAMincho")
-#let gothic = ("Times New Roman", "IPAGothic")
+#let mincho = ("TeX Gyre Termes", "IPAMincho")
+#let gothic = ("TeX Gyre Termes", "IPAGothic")
+// #let mincho = ("Times New Roman", "IPAMincho")
+// #let gothic = ("Times New Roman", "IPAGothic")
 // #let mincho = ("Times New Roman", "MS Mincho", "IPAMincho")
 // #let gothic = ("Times New Roman", "MS Gothic", "IPAGothic")
 
@@ -29,7 +31,6 @@
     leading: 1.00em,
     first-line-indent: (
       amount: 1.00em,
-      all: true,
     ),
     justify: true,
   )
