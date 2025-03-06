@@ -37,7 +37,7 @@
   )
 
   // Configure equation numbering and spacing.
-  set math.equation(numbering: numbering.with("(1)"), supplement: [式])
+  set math.equation(numbering: numbering.with("(1)"), supplement: [Eq.])
   show math.equation: set block(above: 18pt, below: 18pt)
 
   // Configure lists.
