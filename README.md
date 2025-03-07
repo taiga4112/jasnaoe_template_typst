@@ -101,7 +101,7 @@ sudo apt-get install fonts-ipafont
 
 - GitHubアカウントを持っている方は，`use this template` で．自分用のレポジトリを生成してください
 
-- GitHubアカウントを持っていない方は，このGitHubページの `<>Code▼` から `Download ZIP` し，　ZIPファイルを解凍して使用してください．
+- GitHubアカウントを持っていない方は，このGitHubページの `<>Code▼` から `Download ZIP` し，ZIPファイルを解凍して使用してください．
 
 ### 2. 編集&コンパイルでpdfを作成する
 
@@ -116,16 +116,3 @@ typst watch main.typ main.pdf
 ```
 
 詳しくは、[公式サイト](https://github.com/typst/typst?tab=readme-ov-file#usage)を参照ください．
-
-#### Visual Studio Code (VSCode) 固有のプラグインを使用する場合 (非推奨)
-
-1. VSCode で `File`→`Open Folder` でこのフォルダーを開く．
-
-2. 拡張機能をインストール．  
-    - [Typst LSP](https://marketplace.visualstudio.com/items?itemName=nvarner.typst-lsp)
-    - 何でも良いのでpdfをVSCodeで閲覧できる拡張機能．例えば，[vscode-pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf)など．
-
-3. [Typst LSP](https://marketplace.visualstudio.com/items?itemName=nvarner.typst-lsp)のデフォルトの設定では，typファイルを保存すると，問題がなければコンパイル後にpdfファイルが同じ階層に生成されます．
-    - 問題があったときにわかりやすいように，PROBLEMS(日本語で「問題」)を常に表示させておくと良いかと思います．
-        - Macだと command + shift + m ．
-
