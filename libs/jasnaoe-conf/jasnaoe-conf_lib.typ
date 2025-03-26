@@ -75,7 +75,7 @@
       #set par(first-line-indent: 0pt)
       #set text(size: 9pt, font: gothic, weight: "bold")
       #if it.numbering != none {
-        numbering("1.", ..levels)
+        numbering("1.1", ..levels)
         h(8pt, weak: true)
       }
       #it.body
