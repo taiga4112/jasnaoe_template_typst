@@ -29,8 +29,8 @@
     </choose>
   </macro>
   <macro name="author">
-    <names variable="author" delimiter="," suffix=": ">
-      <name and="text" delimiter-precedes-last="always" initialize-with=". " name-as-sort-order="all"/>
+    <names variable="author" suffix=": ">
+      <name initialize-with=". " name-as-sort-order="all" delimiter=", "/>
       <label form="short"/>
       <et-al font-style="italic"/>
     </names>
