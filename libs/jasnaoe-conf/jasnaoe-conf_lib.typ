@@ -23,6 +23,8 @@
     margin: (top: 25mm, bottom: 22mm, x: 17mm)
   )
 
+  let max_width = 86.0mm // 2 columns(86.4mm - margin(0.4mm))
+
   set text(
     size: 9pt,
     font: mincho,
@@ -87,11 +89,26 @@
   show figure.where(kind: image): set figure(placement: top, supplement: [Fig.])
   show figure.where(kind: image): set figure.caption(position: bottom, separator: [ ])
 
-  show figure.caption: it => {
-    align(box(align(it, left)), center)
+  show figure.caption: it => context {
+    let label = it.supplement + " " + str(it.counter.display(it.numbering))
+    
+    let full_text = [label it.body]
+    if measure(full_text).width <= max_width [
+      #align(box(align(it, left)), center)
+    ] else [
+    // Output in 2-column layout
+      #grid(
+        columns: (auto, 1fr),
+        gutter: 0.5em,
+        [
+          #label
+        ],
+        [
+          #box(align(it.body, left))
+        ]
+      )
+    ]
   }
-  
   // Display the paper's contents.
   body
-
 }
