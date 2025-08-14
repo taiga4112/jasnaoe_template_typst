@@ -23,7 +23,7 @@
     margin: (top: 25mm, bottom: 22mm, x: 17mm)
   )
 
-  let max_width = 86.0mm // 2 column(86.4mm - margin(0.4mm))
+  let max_width = 86.0mm // 2 columns(86.4mm - margin(0.4mm))
 
   set text(
     size: 9pt,
