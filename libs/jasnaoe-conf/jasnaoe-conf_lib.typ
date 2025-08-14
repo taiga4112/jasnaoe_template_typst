@@ -92,7 +92,7 @@
   show figure.caption: it => context {
     let label = it.supplement + " " + str(it.counter.display(it.numbering))
     
-    let full_text = [label it.body]
+    let full_text = label + it.body
     if measure(full_text).width <= max_width [
       #align(box(align(it, left)), center)
     ] else [
