@@ -96,7 +96,7 @@
     if measure(full_text).width <= max_width [
       #align(box(align(it, left)), center)
     ] else [
-    // 2列構成で出力
+    // Output in 2-column layout
       #grid(
         columns: (auto, 1fr),
         gutter: 0.5em,
