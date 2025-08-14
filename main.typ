@@ -80,7 +80,7 @@
 #figure(
   placement: auto, // top, bottom, auto, none
   image("figs/example.svg", width: 100%),
-  caption: [Example of a figure.],
+  caption: [Example of a figure of each simple and easy mathematical equation.],
 ) <fig:fig_example>
 
 
