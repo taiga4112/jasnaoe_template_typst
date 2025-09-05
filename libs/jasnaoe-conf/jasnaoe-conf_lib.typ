@@ -109,6 +109,11 @@
       )
     ]
   }
+
+  // Convert full-width punctuation marks to the specified format.
+  show "。": "．"
+  show "、": "，"
+
   // Display the paper's contents.
   body
 }
