@@ -9,13 +9,13 @@
 //本文には反映されませんが、共著者間でのレビュー時に必要かと思います。
 /*
 論文タイトル(日本語): Typstで講演論文書こうぜ -テンプレートを勝手に作って何が悪い!!-
-論文タイトル(英語): Let's write a conference paper with Typst -What's wrong with creating a template on our own!!-
+Paper Title(English): Let's write a conference paper with Typst -What's wrong with creating a template on our own!!-
 著者1(名前(日本語)、名前(英語), 所属(日本語), 会員種別): 造森船一, Senichi Zomori, 造船大学校, 正会員
 著者2(名前(日本語)、名前(英語), 所属(日本語), 会員種別): 海尾学, Manabu Umio, 海洋大学, 学生会員
 著者3(名前(日本語)、名前(英語), 所属(日本語), 会員種別): 造田船次郎, Senjiro Zoda, 造船研究所, 学生会員
 著者4(名前(日本語)、名前(英語), 所属(日本語), 会員種別): 学会一, Hajime Gakkai, 日本船舶海洋工学会, 学生会員
 
-要旨:
+要旨(日本語300字程度、英語150words程度):
 このテンプレートは、2024年秋季講演会以降の日本船舶海洋工学会の講演会論文作成を想定して、Typstで作成しています。
 もちろん♡非公式♡のテンプレートですので、ご使用の際は自己責任でお願いします。
 */
