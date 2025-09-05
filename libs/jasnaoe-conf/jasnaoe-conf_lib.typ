@@ -110,7 +110,8 @@
     ]
   }
 
-  // Convert full-width punctuation marks to the specified format.
+  // Convert full-width Japanese punctuation marks to their Western-style equivalents
+  // to comply with academic writing conventions and publisher formatting requirements.
   show "。": "．"
   show "、": "，"
 
