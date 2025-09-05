@@ -109,6 +109,12 @@
       )
     ]
   }
+
+  // Convert full-width Japanese punctuation marks to their Western-style equivalents
+  // to comply with academic writing conventions and publisher formatting requirements.
+  show "。": "．"
+  show "、": "，"
+
   // Display the paper's contents.
   body
 }
