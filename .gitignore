@@ -6,6 +6,10 @@ desktop.ini
 .DS_Store
 *.pdf
 
+# Figures
+!figs/*.pdf
+!figs/**/*.pdf
+
 # Rust
 /target
 **/*.rs.bk
