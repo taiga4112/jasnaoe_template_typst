@@ -134,7 +134,7 @@
       <group delimiter=" ">
         <text macro="author"/>
         <text macro="title" suffix=","/>
-        <text variable="container-title" font-style="italic" suffix=","/>
+        <text variable="container-title" suffix=","/>
         <text macro="editor"/>
         <text variable="volume" font-weight="normal" suffix=","/>
         <text variable="page" suffix=","/>
