@@ -20,7 +20,7 @@
   <macro name="title">
     <choose>
       <if type="bill book graphic legal_case legislation motion_picture report song" match="any">
-        <text variable="title" font-style="italic"/>
+        <text variable="title"/>
       </if>
       <else-if type="chapter" match="any"/>
       <else>
@@ -32,7 +32,7 @@
     <names variable="author" suffix=": ">
       <name initialize-with=". " name-as-sort-order="all" delimiter=", "/>
       <label form="short"/>
-      <et-al font-style="italic"/>
+      <!-- <et-al font-style="italic"/> -->
     </names>
   </macro>
   <macro name="access">
@@ -134,7 +134,7 @@
       <group delimiter=" ">
         <text macro="author"/>
         <text macro="title" suffix=","/>
-        <text variable="container-title" font-style="italic" suffix=","/>
+        <text variable="container-title" suffix=","/>
         <text macro="editor"/>
         <text variable="volume" font-weight="normal" suffix=","/>
         <text variable="page" suffix=","/>
