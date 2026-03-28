@@ -140,7 +140,7 @@ $ <eq:mmg_example>
 参考文献は連続して引用すると #super[@ichinose_method_2022 @ichinose_sustainable_2022 @okuboStudyPracticalApplication2023] となります。
 引用の際には、`@` の後に参考文献のキーを記載してください。
 
-現時点では、#link("https://typst.app/docs/reference/model/bibliography/")[TypstのBibliograpy機能]を使って、	MendelelyやZoteroなどの文献管理ソフトから.bibファイルをエクスポートして、そのファイルを利用して参考文献リストを作る方法をスタンダートとして定義しています。
+現時点では、#link("https://typst.app/docs/reference/model/bibliography/")[TypstのBibliography機能]を使って、	MendelelyやZoteroなどの文献管理ソフトから.bibファイルをエクスポートして、そのファイルを利用して参考文献リストを作る方法をスタンダートとして定義しています。
 ただし、日本語英語併記には対応していません。日本語英語併記に対応する場合は、参考文献を直接定義する方法を採用してください。
 このファイルの末尾に直接定義する方法の例を記載しています。
 
