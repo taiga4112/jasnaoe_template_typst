@@ -1,25 +1,19 @@
 #import "libs/jasnaoe-conf/jasnaoe-conf_lib.typ": jasnaoe-conf
+#import "libs/jasnaoe-conf/cover_lib.typ": jasnaoe-cover
+
+// 論文情報を info.yaml から読み込む
+#let info = yaml("info.yaml")
+
+// cover: true の場合、本文の前に表紙を生成する
+#if info.at("cover", default: false) {
+  jasnaoe-cover(info)
+  pagebreak()
+}
+
 #show: jasnaoe-conf.with()
 
 #import "libs/jasnaoe-conf/direct_bib_lib.typ": bibliography-list, bib-item, use-bib-item-ref
 #show: use-bib-item-ref.with(numbering: "1)") // 番号の書式を指定
-
-//----------------------------------------
-//以下、申込に必要な最低限の情報です。
-//本文には反映されませんが、共著者間でのレビュー時に必要かと思います。
-/*
-論文タイトル(日本語): Typstで講演論文書こうぜ -テンプレートを勝手に作って何が悪い!!-
-Paper Title(English): Let's write a conference paper with Typst -What's wrong with creating a template on our own!!-
-著者1(名前(日本語)、名前(英語), 所属(日本語), 会員種別): 造森船一, Senichi Zomori, 造船大学校, 正会員
-著者2(名前(日本語)、名前(英語), 所属(日本語), 会員種別): 海尾学, Manabu Umio, 海洋大学, 学生会員
-著者3(名前(日本語)、名前(英語), 所属(日本語), 会員種別): 造田船次郎, Senjiro Zoda, 造船研究所, 学生会員
-著者4(名前(日本語)、名前(英語), 所属(日本語), 会員種別): 学会一, Hajime Gakkai, 日本船舶海洋工学会, 学生会員
-
-要旨(日本語300字程度、英語150words程度):
-このテンプレートは、2024年秋季講演会以降の日本船舶海洋工学会の講演会論文作成を想定して、Typstで作成しています。
-もちろん♡非公式♡のテンプレートですので、ご使用の際は自己責任でお願いします。
-*/
-//----------------------------------------
 
 
 = 緒　　言
@@ -39,7 +33,10 @@ Paper Title(English): Let's write a conference paper with Typst -What's wrong wi
 
 2024年秋季講演会から#link("https://www.jasnaoe.or.jp/lecture/2024aut/thesis.html?id=yoryo")[講演論文のテンプレートが大幅に変更]されました。
 具体的には、論文タイトル、著者情報、キーワード、要旨は講演論文投稿システムで別に作成し、本文のみを記載したファイルを講演論文投稿システムに投稿することで、システム側でマージして完成するようになりました。
-そのため、このテンプレートは、本文情報のみを記載することを想定しており、論文タイトル、著者情報、キーワード、要旨は記載していません。
+そのため、このテンプレートでは、論文タイトル、著者情報、要旨を `info.yaml` に記載し、本文のみをこのファイルに記載することを想定しています。
+`info.yaml` の `cover` を `true` に設定すると表紙を付けてコンパイルされ、`false` に設定すると本文のみがコンパイルされます。
+共著者間でのレビュー時には `cover: true` に設定することで、表紙付きの完全な原稿を確認できます。
+なお、表紙には `info.yaml` に記載した `title`・`authors`・`abstract` の情報が反映されますので、事前に正しく記入してください。
 
 原稿執筆の際には、このテンプレートファイルに直接打ち込んでいって下さい。
 公式フォーマットでは、読点は「，」句点は「．」を使用することとなっています。
