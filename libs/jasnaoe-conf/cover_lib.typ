@@ -79,8 +79,8 @@
 
   v(20pt)
 
-  // Abstract box
-  align(left, box(width: 160mm)[
+  // Abstract
+  align(left,[
     #set text(size: 9pt)
     #set par(first-line-indent: (amount: 0em, all: true), leading: 1.2em, justify: true)
     #let abstract-ja = info.at("abstract", default: (:)).at("ja", default: "")
